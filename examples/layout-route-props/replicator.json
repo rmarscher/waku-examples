@@ -1,0 +1,12 @@
+{
+  "path": "examples/layout-route-props",
+  "version": "2025.09.05",
+  "variables": {
+    "WAKU_PROJECT_NAME": "layout-route-props"
+  },
+  "templates": [
+    "templates.robmarscher.com/waku",
+    "templates.robmarscher.com/waku-clean",
+    "templates.robmarscher.com/waku-examples/layout-route-props"
+  ]
+}

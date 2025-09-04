@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-server-dom-webpack": "19.1.1",
+    "waku": "https://pkg.pr.new/wakujs/waku@1668"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.12",
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
+    "postcss": "8.5.6",
+    "tailwindcss": "4.1.12",
+    "typescript": "5.9.2"
+  },
+  "name": "layout-route-props",
+  "private": true,
+  "scripts": {
+    "build": "waku build",
+    "dev": "waku dev",
+    "start": "waku start"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}

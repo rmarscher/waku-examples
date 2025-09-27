@@ -1,0 +1,66 @@
+{
+  "$schema": "https://replicator-cli.github.io/schemas/latest/replicator.replay-schema.json",
+  "log": [
+    {
+      "template": "templates.robmarscher.com/waku",
+      "path": "examples/waku-capnweb",
+      "time": "2025-09-27T05:16:13.233084+00:00",
+      "requiredBy": [
+        "examples/waku-capnweb"
+      ],
+      "version": "2025.09.27",
+      "inputs": {
+        "WAKU_PROJECT_NAME": "waku-capnweb",
+        "NPM_CREATE": "bun create"
+      },
+      "outputs": {
+        "app:WAKU_PROJECT_NAME": "waku-capnweb",
+        "workspace:NPM_CREATE": "bun create",
+        "workspace:WORKSPACE_NAME": "{{{WORKSPACE_NAME}}}"
+      },
+      "postInstall": [
+        "cd ../ && bun create waku@latest --project-name=waku-capnweb"
+      ]
+    },
+    {
+      "template": "templates.robmarscher.com/waku-clean",
+      "path": "examples/waku-capnweb",
+      "time": "2025-09-27T05:16:16.351247+00:00",
+      "requiredBy": [
+        "examples/waku-capnweb"
+      ],
+      "version": "2025.09.27",
+      "inputs": {},
+      "postInstall": [
+        "rm -rf src/*"
+      ]
+    },
+    {
+      "template": "templates.robmarscher.com/waku-examples/waku-capnweb",
+      "path": "examples/waku-capnweb",
+      "time": "2025-09-27T05:16:13.232779+00:00",
+      "requiredBy": [
+        "user"
+      ],
+      "version": "2025.09.27",
+      "inputs": {
+        "WAKU_PROJECT_NAME": "waku-capnweb",
+        "NPM_ADD": "bun add --exact",
+        "NPM_INSTALL": "bun i"
+      },
+      "postInstall": [
+        "bun i capnweb"
+      ],
+      "requirements": [
+        [
+          "templates.robmarscher.com/waku",
+          "app:"
+        ],
+        [
+          "templates.robmarscher.com/waku-clean",
+          "app:"
+        ]
+      ]
+    }
+  ]
+}

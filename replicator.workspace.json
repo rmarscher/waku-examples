@@ -1,0 +1,23 @@
+{
+  "$schema": "https://replicator-cli.github.io/schemas/latest/replicator.workspace-schema.json",
+  "name": "waku-examples",
+  "version": "2025.09.27",
+  "apps": {
+    "examples/waku-capnweb": {
+      "path": "examples/waku-capnweb",
+      "version": "2025.09.27",
+      "variables": {
+        "WAKU_PROJECT_NAME": "waku-capnweb"
+      },
+      "templates": [
+        "templates.robmarscher.com/waku",
+        "templates.robmarscher.com/waku-clean",
+        "templates.robmarscher.com/waku-examples/waku-capnweb"
+      ]
+    }
+  },
+  "variables": {
+    "NPM_CREATE": "bun create",
+    "WORKSPACE_NAME": "{{{WORKSPACE_NAME}}}"
+  }
+}
